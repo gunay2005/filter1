@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=LmMrHEvjsP_jwbMf_Q4J7KCgdJb3MNLqcaQnVhhJMLZi-f984gvw_lEDteXsbuF6NphPjFUUfNaPyhuaNBPXFw" charset="UTF-8"></script><script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style>
@@ -20,7 +21,7 @@
 <body>
     
 
-    <header class="p-4 dark:bg-gray-100 dark:text-gray-800">
+    <header class="p-4  dark:bg-gray-100 dark:text-gray-800">
 	<div class="container flex justify-between h-16 mx-auto">
 		<a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
 			<!-- <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-8 h-8 dark:text-violet-600">
@@ -63,8 +64,13 @@
 </header>
     
     <main>
+<div class="search flex items-center justify-end ">
+	<input type="text" class="border border-purple-300 px-8 py-2 m-4 rounded-lg w-64 focus:outline-none focus:ring-2 focus:ring-purple-400" id="srchinput">
+
+</div>
+
         <section>
-            <div class="container mx-auto p-10 justify-center flex flex-wrap gap-3" id="categotyes">
+            <div class="container mx-auto p-10 justify-center flex flex-wrap gap-3" id="categoriler">
                 <button class="px-4 py-2 rounded-full bg-purple-100 text-white-700 text-sm font-medium transition-colors hover:bg-grey-200 focus:ring-2 focus:ring-purple-400 focus:outline-none">All</button>
 
             </div>
@@ -75,6 +81,18 @@
             </div>
         </section>
     </main>
+
+
+	<div id="cartModal" class="fixed top-0 right-0 w-[350px] h-full bg-white shadow-lg p-5 overflow-y-auto hidden z-50">
+    
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold">Cart</h2>
+        <button onclick="closeCart()" class="text-red-500 text-lg">✖</button>
+    </div>
+
+    <div id="cartItems" class="space-y-4"></div>
+
+</div>
     <script src="script.js"></script>
 </body>
 </html>
